@@ -16,6 +16,7 @@ pdf="pdf"
 md="md"
 tex="tex"
 tex_pandoc="tex-pandoc"
+css="css"
 html="html"
 cms_wp_lokal="cms-wp-lokal"
 cms_wp_server="cms-wp-server"
@@ -53,6 +54,7 @@ if [ ! -d ./$pdfname/$img ];     then mkdir -p ./$pdfname/$img; fi
 if [ ! -d ./$pdfname/$code ];    then mkdir -p ./$pdfname/$code; fi
 if [ ! -d ./$pdfname/$scripte ]; then mkdir -p ./$pdfname/$scripte; fi
 if [ ! -d ./$pdfname/$content ]; then mkdir -p ./$pdfname/$content; fi
+if [ ! -d ./$pdfname/$css ]; then mkdir -p ./$pdfname/$css; fi
 
 
 echo "fertig"

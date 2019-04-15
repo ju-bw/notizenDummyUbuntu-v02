@@ -9,6 +9,7 @@ pdfname="notizenDummyUbuntu-v02"
 info="PDF erstellen - pdflatex: tex -> pdf"
 scripte="scripte"
 code="code"
+css="css"
 img="img"
 img_in="img-in"
 img_out="img-out"
@@ -136,6 +137,7 @@ cp -Rp projekt.sh               $pdfname/
 # Wenn pdf-erstellung erfolgreich,
 rsync -avpEh --delete $tex/     $pdfname/$tex
 rsync -avpEh --delete $md/      $pdfname/$md
+rsync -avpEh --delete $css/      $pdfname/$css
 rsync -avpEh --delete $html/    $pdfname/$html
 rsync -avpEh --delete $cms_wp_lokal/ $pdfname/$cms_wp_lokal
 rsync -avpEh --delete $cms_wp_server/ $pdfname/$cms_wp_server
