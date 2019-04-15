@@ -1,0 +1,20 @@
+#WERT	         #AUSWIRKUNG
+Restricted	   Es werden keine Konfigurationsdateien geladen und keine Scripts ausgeführt (Standard)
+AllSigned	     Signierte Scripts und Konfigurationsdateien von einem vertrauenswürdigen Herausgeber werden ausgeführt. Auch lokal erstellte Scripts müssen signiert sein.
+RemoteSigned	 Aus dem Internet heruntergeladenen Scripts und Konfigurationsdateien müssen von einem vertrauenswürdigen Herausgeber signiert sein.
+Unrestricted	 Alle Konfigurationsdateien und alle Scripts werden ausgeführt. Bei nicht signierten Scripts aus dem Internet muss man jede Ausführung am Prompt bestätigen
+Bypass	       Keinerlei Blockade, keine Warnungen oder Prompts.
+Undefined	     Entfernt die gerade zugewiesene Richtlinie (nur für lokal zugewiesene Richtlinien, nicht für GPO-applizierte)
+
+
+Poswershellscripte ausführbar machen
+
+
+Set-ExecutionPolicy -Scope 'CurrentUser' -ExecutionPolicy 'Unrestricted'
+Set-ExecutionPolicy -Scope 'LocalMachine' -ExecutionPolicy 'Unrestricted'
+
+Set-ExecutionPolicy -Scope 'CurrentUser' -ExecutionPolicy 'RemoteSigned'
+Set-ExecutionPolicy -Scope 'LocalMachine' -ExecutionPolicy 'RemoteSigned'
+
+Get-ExecutionPolicy -List
+

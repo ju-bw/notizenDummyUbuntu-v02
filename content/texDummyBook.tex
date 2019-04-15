@@ -1,0 +1,78 @@
+% 6-Apr-2019
+% Modified source from
+% <https://www.dcl.hpi.uni-potsdam.de/media/theses/>
+%
+\documentclass[parskip=half, fleqn]{scrreprt} % <= Druckversion: "scrbook", Bildschirmversion: "scrreprt"
+% meine Einstellung
+\usepackage{content/praeambel-book}
+
+% ABOUT
+\newcommand{\typ}{Projekt}
+\newcommand{\autor}{Jan Unger}
+\newcommand{\titel}{notizenDummyUbuntu-v02} % wird per Powershell Script ersetzt
+\newcommand{\untertitel}{Mitschrift}
+\newcommand{\ort}{Wuppertal}
+\newcommand{\datum}{\today}
+\newcommand{\website}{https://www.ju1.eu}
+
+% DOCUMENT
+%\KOMAoption{draft}{true} % <= z.B. zum "Debuggen" der Overfull-Boxes
+\bibliography{content/literatur}% meine Literatur
+\bibliography{content/literatur-laufen}% meine Literatur
+
+\begin{document}
+	\selectlanguage{ngerman}
+
+	% Einband
+	%\pagenumbering{alph}
+	%\ifisbook\include{content/coverpage}\fi
+	%\ifisbook\cleardoubleemptypage\fi
+
+	% (Haupt-)Titelseite, Zusammenfassung, ggf. Danksagung & Inhaltsverzeichnis
+	\pagenumbering{roman}
+	\include{content/titlepage}
+	%\ifisbook\cleardoubleemptypage\fi\include{content/zusammenfassung}% example
+	%\ifisbook\cleardoubleemptypage\fi\include{content/danksagung}% example
+	\tableofcontents
+	\cleardoublepage
+
+	% Textteil
+	\pagenumbering{arabic}
+
+	% Inhalt
+	% --------------------------------------------------
+	%
+	\include{inhalt} % wird per Powershell Script ersetzt
+	%
+	% --------------------------------------------------
+	%\chapter{Kapitel}
+	%\chapter{Readme}
+	%\include{content/Readme}
+	%\chapter{MarkdownSpickzettel}
+	%\include{content/MarkdownSpickzettel}
+	%\chapter{LatexSpickzettel}
+	%\include{content/LatexSpickzettel}
+	%\chapter{AdobeStockLizenz}
+	%\include{content/AdobeStockLizenz}
+	%\chapter{VorlageLaTeX}
+	%\include{content/VorlageLaTeX}
+	%
+	%\input{Projekt-files}
+	% --------------------------------------------------
+	%
+	% ggf. Anhang
+	%\appendix\include{content/anhang} % example
+
+	% Bibliographie
+	\ifisbook\cleardoubleemptypage\fi
+	\phantomsection\addcontentsline{toc}{chapter}{\refname}
+	\printbibliography[category=cited]
+	%\printbibliography[heading=bibintoc] % Bibliographie
+
+	% Eigenstaendigkeitserklaerung
+	%\ifisbook\pagestyle{plain}\cleardoubleemptypage\include{content/erklaerung}\fi % example
+
+\end{document}
+%============================
+%============================
+%============================

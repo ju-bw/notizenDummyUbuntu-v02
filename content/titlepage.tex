@@ -1,0 +1,39 @@
+% ju - 25-Apr-18 - titelpage.tex 
+% Modified source from
+% <https://www.dcl.hpi.uni-potsdam.de/media/theses/>
+%
+\begin{titlepage}
+	\setlength{\evensidemargin}{0.8\evensidemargin+0.5\oddsidemargin}
+	\setlength{\oddsidemargin}{\evensidemargin}
+
+	\centering
+
+	\raisebox{-0.5\height}{\includegraphics[width=8cm]{img/titelbild.pdf}}
+	%\raisebox{-0.5\height}{\includegraphics[width=8cm]{img/titelbild.pdf}}
+	%\hspace*{.2\textwidth}
+	%\raisebox{-0.5\height}{\includegraphics[width=3cm]{img/logo.pdf}}
+	\hfill
+	\vspace{3mm}
+	{\color{meinblue} \rule{\textwidth}{3pt}}
+
+
+	\vspace*{4\baselineskip}
+	%{\usekomafont{subject}\typ}\par
+	%\vspace*{\baselineskip}
+	{\usekomafont{title}\titel\par}
+	\vspace*{\baselineskip}
+	{\usekomafont{author}Autor: \autor}\par
+	%\vspace*{\baselineskip}
+	%{\usekomafont{date}\ort}\par
+
+
+	\begin{flushleft}
+		\vfill
+		{\usekomafont{date}Version: \datum}\par
+		\vspace*{\baselineskip}
+		{\qrcode[hyperlink,height=1.5cm]{\website}}\par
+	\end{flushleft}
+
+	\setcounter{page}{1}
+
+\end{titlepage}

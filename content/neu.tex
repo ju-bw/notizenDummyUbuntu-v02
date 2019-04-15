@@ -1,0 +1,68 @@
+%----------
+% \section{ }
+% \subsection{ }\label{ }\index{ }
+%----------
+
+\hypertarget{test}{%
+\section{Test}\label{test}}
+
+\hypertarget{quellcode}{%
+\subsection{Quellcode}\label{quellcode}}
+
+(\autoref{code:Codename } Codename). % Codeverweis =
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% -----------
+	caption={Codename }, % Caption
+	label={code:Codename }  % Label
+]% ---------=
+
+  # Überschrift
+  ## Überschrift 2
+  ### Überschrift 3
+\end{lstlisting}
+
+\hypertarget{bild}{%
+\subsection{Bild}\label{bild}}
+
+% Bild Referenz
+(\autoref{pic:logo} logo.pdf ). % Bildverweis = logo.pdf
+
+\begin{figure}[!hp]% hier
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/logo.pdf}
+	% ---------
+	\caption[logo.pdf ]{logo.pdf } % Caption
+	\label{pic:logo}	% Referenz
+	% ---------
+\end{figure}
+
+\hypertarget{tabelle}{%
+\subsection{Tabelle}\label{tabelle}}
+
+(\autoref{tab:Tabellenname } Tabellenname ). % Tabellenverweis = Tabellenname
+
+% Tabelle
+\begin{table}[!hp] % hier
+	\centering
+	%\setlength{\tabcolsep}{5mm} % Spaltenlänge fest
+	\rowcolors{1}{}{lightgray!20}  % Farbe
+	%\begin{tabularx}{\textwidth}{XX} % auto. Spaltenumbruch
+	\begin{tabular} []{rll}
+	\toprule % Inhalt
+	% ---------
+\textbf{Nr.} & \textbf{Begriffe} & \textbf{Erklärung}\\
+	\midrule
+1 & a1 & a2\\
+2 & b1 & b2\\
+3 & c1 & c2\\
+	\bottomrule
+	%\end{tabularx}
+	\end{tabular}
+	\caption[Tabellenname ]{Tabellenname }	% Caption
+	\label{tab:Tabellenname }	% Referenz
+	%-----------
+\end{table}
+%-----------

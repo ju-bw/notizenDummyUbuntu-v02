@@ -1,0 +1,272 @@
+%============================
+% \section{ }
+% \subsection{ }\label{ }\index{ }
+%============================
+
+\section{Markdown - Spickzettel}\label{markdown-syntax}
+
+\subsection{Überschrift}\label{ueberschrift}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Überschrift
+    ## Überschrift 2
+    ### Überschrift 3
+\end{lstlisting}
+
+\subsection{Bild}\label{bild}
+
+% Bild Referenz
+(\autoref{pic:logo1} logo.pdf). % Bildverweis = logo.pdf
+
+\begin{figure}[!hp]% hier
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/logo.pdf}
+	% ====================
+	\caption[logo.pdf ]{logo.pdf } % Caption
+	\label{pic:logo1}	% Referenz
+	% ====================
+\end{figure}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # bild
+    ![Logo](img/logo.pdf)
+\end{lstlisting}
+
+\subsection{Tabelle}\label{tabelle}
+
+(\autoref{tab:Tabelle } ). % Tabellenverweis = Tabelle
+
+% Tabelle
+\begin{table}[!hp] % hier
+	\centering
+	%\setlength{\tabcolsep}{5mm} % Spaltenlänge fest
+	\rowcolors{1}{}{lightgray!20}  % Farbe
+	%\begin{tabularx}{\textwidth}{XX} % auto. Spaltenumbruch
+	\begin{tabular} []{rll}
+	\toprule % Inhalt
+	% ---------
+\textbf{Nr.} & \textbf{Begriffe} & \textbf{Erklärung}\\
+	\midrule
+1 & a1 & a2\\
+2 & b1 & b2\\
+3 & c1 & c2\\
+4 & a1 & a2\\
+	\bottomrule
+	%\end{tabularx}
+	\end{tabular}
+	\caption[Tabelle ]{Tabelle }	% Caption
+	\label{tab:Tabelle }	% Referenz
+	%============================
+\end{table}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # tabelle
+    |**Nr.**|**Begriffe**|**Erklärung**|
+    |--:|:-----|:----|
+    | 1     | a1         | a2                |
+    | 2     | b1         | b2              |
+    | 3     | c1         | c2              |
+    | 4     | a1         | a2              |
+\end{lstlisting}
+
+\subsection{Mathe}\label{mathe}
+
+$[ V ] = [ \Omega ] \cdot [ A ]$ o. $U = R \cdot I$ o.
+$R = \frac{U}{I}$
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Mathe
+    $[ V ] = [ \Omega ] \cdot [ A ]$ o. $U = R \cdot I$ o. $R = \frac{U}{I}$
+\end{lstlisting}
+
+\textbf{Matheumgebung:}
+
+\begin{align*}
+    \sum_{i=1}^5 a_i = a_1 + a_2 + a_3 + a_4 + a_5
+\end{align*}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Matheumgebung
+    \begin{align*}
+        \sum_{i=1}^5 a_i = a_1 + a_2 + a_3 + a_4 + a_5
+    \end{align*}
+\end{lstlisting}
+
+\subsection{Absätze}\label{absaetze}
+
+Dies hier ist ein Blindtext zum Testen von Textausgaben. Wer diesen Text
+liest, ist selbst schuld. Der Text gibt lediglich den Grauwert der
+Schrift an. Ist das wirklich so? Ist es gleichgültig, ob ich schreibe:
+\frqq Dies ist ein Blindtext\flqq\, oder \frqq Huardest gefburn\flqq\,? Kjift -
+mitnichten! Ein Blindtext bietet mir wichtige Informationen.
+
+Dies hier ist ein Blindtext zum Testen von Textausgaben. Wer diesen Text
+liest, ist selbst schuld. Der Text gibt lediglich den Grauwert der
+Schrift an. Ist das wirklich so? Ist es gleichgültig, ob ich schreibe:
+\frqq Dies ist ein Blindtext\flqq\, oder \frqq Huardest gefburn\flqq\,? Kjift -
+mitnichten! Ein Blindtext bietet mir wichtige Informationen.
+
+\subsection{Listen}\label{listen}
+
+\textbf{ungeordnete Liste}
+
+\begin{itemize}% Liste Punkt
+\item
+  a
+\item
+  b
+
+  \begin{itemize}% Liste Punkt
+  \item
+    bb
+  \end{itemize}
+\item
+  c
+\end{itemize}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # ungeordnete Liste
+    - a
+    - b
+        - bb
+    - c
+\end{lstlisting}
+
+\textbf{Sortierte Liste}
+
+\begin{enumerate}% Liste 1) oder a)
+\item
+  eins
+\item
+  zwei
+\item
+  drei
+\end{enumerate}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Sortierte Liste
+    1. eins
+    2. zwei
+    3. drei
+\end{lstlisting}
+
+\textbf{Sortierte Liste}
+
+\begin{enumerate}% Liste 1) oder a)
+\def\labelenumi{\alph{enumi})}
+\item
+  a
+\item
+  b
+\item
+  c
+\end{enumerate}
+
+(\autoref{code:Liste } Liste). % Codeverweis = Liste
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={Liste }, % Caption
+	label={code:Liste }  % Label
+]% =====================
+
+    # Sortierte Liste
+    a) a
+    b) b
+    c) c
+\end{lstlisting}
+
+\subsection{Anführungszeichen}\label{anfuehrungszeichen}
+
+\frqq Anführungszeichen\flqq\, oder \flqq Anführungszeichen\frqq   oder
+\frqq Anführungszeichen\flqq
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Anführungszeichen
+    "Anführungszeichen" oder
+    \flqq Anführungszeichen\frqq   oder
+    \frqq Anführungszeichen\flqq
+\end{lstlisting}
+
+\subsection{Quellenangabe}\label{quellenangabe}
+
+Quelle \textcite{schlosser_latex:2016}
+
+Quelle Text\footfullcite{schlosser_latex:2016}
+
+Quelle \cite{schlosser_latex:2016}
+
+% Quellcode
+\lstset{language=Bash} % C, [LaTeX]TeX, Bash, Python
+\begin{lstlisting}[numbers=left, frame=l, framerule=0.1pt,%
+% ======================
+	caption={ }, % Caption
+	label={code: }  % Label
+]% =====================
+
+    # Quellenangabe
+    Quelle \textcite{schlosser_latex:2016}
+    Quelle Text\footfullcite{schlosser_latex:2016}
+    Quelle \cite{schlosser_latex:2016}
+\end{lstlisting}
+%============================
+%============================
+%============================

@@ -1,0 +1,66 @@
+% 6-Apr-2019
+\documentclass[12pt, a4paper, parskip=half, fleqn]{scrartcl} % parskip=half // Absatzabstand
+% meine Einstellungen
+\include{content/praeambel-artikel}
+%
+% ++++++++++++++++++++++++++++++++++
+% ABOUT
+\newcommand{\typ}{Projekt}
+\newcommand{\autor}{Jan Unger}
+\newcommand{\titel}{notizenDummyUbuntu-v02} % wird per Script ersetzt
+\newcommand{\untertitel}{Mitschrift}
+\newcommand{\ort}{Wuppertal}
+\newcommand{\datum}{\today}
+\newcommand{\website}{https://www.ju1.eu}
+%
+% Literatur
+\bibliography{content/literatur}       % Bibliotheksdatei
+\bibliography{content/literatur-laufen}% Bibliotheksdatei
+%
+% ++++++++++++++++++++++++++++++++++
+\begin{document}
+  \selectlanguage{ngerman}
+
+  \title{\titel}
+  \author{Autor: \autor}
+
+  \makeatletter
+  \def\@maketitle{
+  \begin{center}
+    % titelbild +++++++++++++++++++++++++++++
+    \makebox[\textwidth][c]{ \includegraphics[width=.8\paperwidth]{img/titelbild.pdf}}\\[3ex]
+    {\Huge \bfseries \sffamily \@title }\\[3ex]
+    {\Large \sffamily \@author}\\[3ex]
+    % logo ++++++++++++++++++++++++++++++++++
+    %\includegraphics[width=.15\linewidth]{img/logo.pdf}
+    \vfil
+  \end{center}}
+  \makeatother
+
+  \maketitle
+
+  \noindent {\footnotesize Version: \datum \\[3ex]
+                           \qrcode[hyperlink,height=1cm]{/}
+  }
+
+  \newpage
+
+  \tableofcontents
+
+  \newpage
+
+  % Inhalt
+  % -----------------------------------
+  %
+  \include{tex/DUMMY}
+  %
+  % -----------------------------------
+  %\include{content/Readme}
+  %\include{content/MarkdownSpickzettel}
+  %\include{content/LatexSpickzettel}
+	%\include{content/AdobeStockLizenz}
+  %\include{content/VorlageLaTeX}
+  % -----------------------------------
+
+	\printbibliography[heading=bibintoc] % Bibliographie
+\end{document}

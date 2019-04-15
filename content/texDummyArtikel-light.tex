@@ -1,0 +1,27 @@
+% 6-Apr-2019
+\documentclass[12pt, a4paper, parskip=half, fleqn]{scrartcl} % parskip=half // Absatzabstand
+% meine Einstellungen
+\include{content/praeambel-artikel-light}
+% Literatur
+\bibliography{content/literatur}       % Bibliotheksdatei
+\bibliography{content/literatur-laufen}% Bibliotheksdatei
+%
+\begin{document}
+  \selectlanguage{ngerman}
+
+  % Inhalt
+  % -----------------------------------
+  %
+  \include{tex/DUMMY}
+  %
+	% -----------------------------------
+  %\include{content/Readme}
+  %\include{content/MarkdownSpickzettel}
+  %\include{content/LatexSpickzettel}
+	%\include{content/AdobeStockLizenz}
+  %\include{content/VorlageLaTeX}
+  % -----------------------------------
+  %
+  % Bibliographie
+  \printbibliography[heading=bibintoc]
+\end{document}
