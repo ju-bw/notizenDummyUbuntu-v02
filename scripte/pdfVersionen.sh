@@ -42,7 +42,7 @@ md5sum $fileVers.pdf  >> $file
 
 
 cp -Rp main-book*pdf $pdfname/$pdf/
-mv -Rp main-book*pdf $archiv/
+mv  main-book*pdf $archiv/
 cp -Rp $file $pdfname/
 cp -Rp $file $archiv/
 

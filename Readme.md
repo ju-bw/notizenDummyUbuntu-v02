@@ -30,6 +30,7 @@ ACHTUNG: Script außerhalb vom neu-notiz-proj ausführen.
 
   $ cd neu-notiz-proj/
   $ ./projekt.sh
+      # git init
 ~~~
 
 ## Software
